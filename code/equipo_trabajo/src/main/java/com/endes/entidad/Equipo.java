@@ -19,11 +19,20 @@ public class Equipo {
      * Añade un nuevo miembro al equipo.
      *
      * @param p El objeto Personal a añadir
+     * @throws IllegalArgumentException si el miembro ya existe en el equipo
+     *                                  (basado en su DNI).
      */
     public void añadirMiembro(Personal p) {
         if (p == null) {
             throw new IllegalArgumentException("El miembro no puede ser nulo.");
         }
+        
+        for (Personal miembro : miembros) {
+            if (miembro.getDni().equals(p.getDni())) {
+                throw new IllegalArgumentException("Ya existe un miembro con el mismo DNI: " + p.getDni());
+            }
+        }
+        
         miembros.add(p);
     }
 
@@ -44,3 +53,6 @@ public class Equipo {
         return miembros;
     }
 }
+
+
+

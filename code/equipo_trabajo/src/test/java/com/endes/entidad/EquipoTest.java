@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,6 @@ class EquipoTest {
         equipo = new Equipo();
     }
 
-    @Disabled
     @Test
     @DisplayName("Añadir un miembro con DNI único no lanza excepción; el duplicado sí")
     void testAñadirMiembroDuplicado() {
