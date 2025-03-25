@@ -1,3 +1,4 @@
+
 package com.endes.entidad;
 import java.util.ArrayList;
 import java.util.List;
